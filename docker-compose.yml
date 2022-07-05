@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  admin:
+    build: .      
+    image: "samad09/admin:1"
+    restart: always
+    ports:
+    - "8000:8000"
+  auth:
+    build: .      
+    image: "samad09/auth:1"
+    restart: always
+    ports:
+    - "3000:8000"
+  user:
+    build: .
+    image: "samad09/user:1"
+    restart: always
+    ports:
+    - "2000:3000"        
