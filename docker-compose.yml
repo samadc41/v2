@@ -7,6 +7,7 @@ services:
     restart: always
     ports:
     - "8000:8000"
+
   auth:
     build: .      
     image: "samad09/auth:1"
@@ -18,4 +19,21 @@ services:
     image: "samad09/user:1"
     restart: always
     ports:
-    - "2000:3000"        
+    - "2000:3000"
+  atten:
+    build: .
+    image: "samad09/atten:1"
+    restart: always
+    ports:
+     - "3001:3000"
+  task:
+    build: .
+    image: "samad09/task:1"
+    restart: always
+    ports: 
+    - "8001:8000"
+  delivery:
+    build: .
+    image: "samad09/delivery:1"
+    ports:
+    - "3002:3000       
