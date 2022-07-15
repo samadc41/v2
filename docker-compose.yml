@@ -36,4 +36,4 @@ services:
     build: .
     image: "samad09/delivery:1"
     ports:
-    - "3002:3000       
+    - "3002:3000"       
